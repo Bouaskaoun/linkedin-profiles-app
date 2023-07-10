@@ -56,7 +56,8 @@ else:
 # Create a map centered on Europe
 map_center = [52.5200, 13.4050]  # Berlin, Germany
 zoom_start = 5
-m = folium.Map(location=map_center, zoom_start=zoom_start)
+max_bounds = [[90, -180], [-90, 180]]  # Set the maximum bounds for dragging
+m = folium.Map(location=map_center, zoom_start=zoom_start, max_bounds=max_bounds)
 
 # Define the locations and their coordinates
 locations_coord = {
