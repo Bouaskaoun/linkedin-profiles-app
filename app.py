@@ -45,7 +45,7 @@ st.markdown("This interactive map displays profiles from LinkedIn. You can filte
 
 # Filter options
 st.subheader("Filter")
-filter_options = ["All"] + df['category'].unique().tolist()
+filter_options = df['category'].unique().tolist() + ["All"]
 selected_filter = st.selectbox("Select Category", filter_options)
 
 if selected_filter == "All":
